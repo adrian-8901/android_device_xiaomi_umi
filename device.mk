@@ -67,9 +67,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libaudio-resampler
+    
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/umi/configs/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/umi/configs/audio,$(TARGET_COPY_OUT_VENDOR)/etc/audio)
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
