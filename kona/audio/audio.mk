@@ -107,6 +107,8 @@ PRODUCT_PACKAGES += \
 	teardown_loopback.sh
 	
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/umi/configs/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/umi/configs/audio,$(TARGET_COPY_OUT_VENDOR)/etc/audio)
+
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
