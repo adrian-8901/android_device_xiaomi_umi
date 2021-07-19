@@ -216,6 +216,12 @@ PRODUCT_PACKAGES += \
     libchrome.vendor \
     NfcNci \
     SecureElement \
+    com.nxp.nfc.nq \
+    ls_nq_client \
+    jcos_nq_client \
+    nfc_nci.nqx.default.hw \
+    NQNfcNci \
+    se_nq_extn_client \
     Tag \
     vendor.nxp.hardware.nfc@1.1 \
     vendor.nxp.hardware.nfc@2.0 \
@@ -224,6 +230,9 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
     android.hardware.secure_element@1.1 \
     android.hardware.secure_element@1.2
+
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
     
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
