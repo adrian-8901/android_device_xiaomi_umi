@@ -38,16 +38,12 @@ PRODUCT_PACKAGES += \
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
-
-# ANX camera
-$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
     
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# Audio
-$(call inherit-product, $(LOCAL_PATH)/kona/audio/audio.mk)
+
 
 # Bluetooth
 PRODUCT_PACKAGES += \
