@@ -49,27 +49,52 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.soundtrigger@2.2-impl \
     android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.bluetooth.default \
+    audio.primary.kona \
+    audio.r_submix.default \
     audio.usb.default \
-    audio.r_submix.default
+    audio_amplifier.kona \
 
 PRODUCT_PACKAGES += \
+    liba2dpoffload \
+    libaudiopreprocessing \
+    libbatterylistener \
+    libbundlewrapper \
+    libcomprcapture \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libexthwplugin \
+    libhdmiedid \
+    libhfp \
+    libldnhncr \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors \
+    libreverbwrapper \
+    libsndmonitor \
+    libspkrprot \
+    libvisualizer \
     libvolumelistener
 
-PRODUCT_PACKAGES += \
-    libaudio-resampler
-    
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/umi/configs/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/xiaomi/umi/configs/audio,$(TARGET_COPY_OUT_VENDOR)/etc/audio)
+# Audio configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
+    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    $(LOCAL_PATH)/audio/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 
 PRODUCT_COPY_FILES += \
