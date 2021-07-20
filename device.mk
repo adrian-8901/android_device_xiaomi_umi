@@ -344,6 +344,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/seccomp/wfdvndservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdvndservice.policy \
     $(LOCAL_PATH)/configs/seccomp/wifidisplayhalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wifidisplayhalservice.policy \
 
+# SQLite
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/SQlite/sqlite3:$(TARGET_COPY_OUT_SYSTEM)/xbin/sqlite3
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.class_main.sh \
