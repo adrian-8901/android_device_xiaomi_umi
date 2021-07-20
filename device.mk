@@ -38,9 +38,6 @@ PRODUCT_PACKAGES += \
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
-
-# ANX camera
-$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
     
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -238,7 +235,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-fluid
     
 # Perf
 PRODUCT_PACKAGES += \
