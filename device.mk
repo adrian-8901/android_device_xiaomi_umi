@@ -331,6 +331,10 @@ PRODUCT_COPY_FILES += \
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_umi
+
+# RenderScript
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
     
 # RIL
 PRODUCT_PACKAGES += \
