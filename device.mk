@@ -327,6 +327,10 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_umi
     
 # RIL
 PRODUCT_PACKAGES += \
